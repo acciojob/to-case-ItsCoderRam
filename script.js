@@ -3,11 +3,11 @@ function toCase(text) {
 	let uppercase = "";
 	for (let i = 0; i < text.length; i++) {
 		let charcode = text.charCodeAt(i);
-		if(charcode >=90){
+		if(charcode >=97 &&charcode =< 122 ){
 		let str = String.fromCharCode(charcode-32);
 		uppercase = uppercase + str; 
 		}
-		else{
+		else if(charcode >=65 && charcode <=92){
 		 str = String.fromCharCode(charcode);
 		 uppercase = uppercase + str; 
 		}  
@@ -18,6 +18,7 @@ function toCase(text) {
 }
 
 // DO not change the code below
+
  
 const text = prompt("Enter text:"); 
 alert(toCase(text)); 
