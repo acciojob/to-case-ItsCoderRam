@@ -2,8 +2,8 @@
 function toCase(text) { 
 	let lowercase = "";
     let uppercase = "";
-	let lowerstr;
-	for (let i = 0; i < text.length; i++) {
+	let lowerstr; 
+	for (let i = 0; i < text.length; i++) { 
         let charcode = text.charCodeAt(i);
 		if(charcode >=97 && charcode <= 122 ){
             let str = String.fromCharCode(charcode-32);
@@ -15,9 +15,8 @@ function toCase(text) {
              str = String.fromCharCode(charcode);
 			lowerstr = String.fromCharCode(charcode+32);
             uppercase = uppercase + str;   
-			lowercase = lowercase + lowerstr;
+			lowercase = lowercase + lowerstr; 
         }   
-		// for lowercase 
 		
     }  
     return `'${lowercase}-${uppercase}'`; 
