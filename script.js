@@ -6,24 +6,21 @@ function toCase(text) {
         let charcode = text.charCodeAt(i);
 		if(charcode >=97 && charcode <= 122 ){
             let str = String.fromCharCode(charcode-32);
+			let lowerstr = String.fromCharCode(charcode);
             uppercase = uppercase + str; 
+			lowercase = lowercase + lowerstr;
         } 
 		else if(charcode >= 65 && charcode <=90){
-            let str = String.fromCharCode(charcode);
+             str = String.fromCharCode(charcode);
+			lowerstr = String.fromCharCode(charcode+32);
             uppercase = uppercase + str;   
-        }  
-		// for lowercase
-		esle if(charcode >=97 && charcode <= 122 ){
-            let str = String.fromCharCode(charcode);
-            lowercase = lowercase + str; 
-        } 
-		else if(charcode >= 65 && charcode <=90){
-            let str = String.fromCharCode(charcode+32);
-            lowercase = lowercase + str;    
-        }  
+			lowercase = lowercase + lowercase;
+        }   
+		// for lowercase 
+		
     }  
     return `'${lowercase}-${uppercase}'`; 
 }
 // DO not change the code below 
-const text = prompt("Enter text:");  
+ const text = prompt("Enter text:");    
 alert(toCase(text)); 
