@@ -5,12 +5,12 @@ function toCase(text) {
 		let charcode = text.charCodeAt(i);
 		if(charcode >=92){
 		let str = String.fromCharCode(charcode-32);
-		uppercase = uppercase + str;
+		uppercase = uppercase + str; 
 		}
 		else{
 		 str = String.fromCharCode(charcode);
 		 uppercase = uppercase + str; 
-		}
+		}  
 	}  
 	uppercase = uppercase.slice(1,-1);
 	text = text.slice(1,-1);
