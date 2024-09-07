@@ -3,12 +3,18 @@ function toCase(text) {
 	let uppercase = '';
 	for (let i = 0; i < text.length; i++) {
 		let charcode = text.charCodeAt(i);
+		console.log(charcode);
 		if(charcode >=92){
 		let str = String.fromCharCode(charcode-32);
+		uppercase = uppercase + str;
+		console.log(str);
 		}
-		else
-			let str = String.fromCharCode(charcode);
+		else{
+		  
+		 str = String.fromCharCode(charcode);
 		 uppercase = uppercase + str; 
+		 console.log(str);
+		}
 	} 
 	return uppercase;
 }
