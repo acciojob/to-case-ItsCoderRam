@@ -3,7 +3,7 @@ function toCase(text) {
 	let uppercase = "";
 	for (let i = 0; i < text.length; i++) {
 		let charcode = text.charCodeAt(i);
-		if(charcode >=92){
+		if(charcode >=90){
 		let str = String.fromCharCode(charcode-32);
 		uppercase = uppercase + str; 
 		}
